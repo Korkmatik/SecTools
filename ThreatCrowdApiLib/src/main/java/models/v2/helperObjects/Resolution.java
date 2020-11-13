@@ -9,7 +9,16 @@ public class Resolution {
 	
 	public Resolution(JSONObject data) {
 		lastResolved = data.getString("last_resolved");
-		ipAddress = data.getString("ip_address");
+		if (data.has("ip_address")) {
+			ipAddress = data.getString("ip_address");
+		} else {
+			String addr = data.getString("domain");
+			if (addr.endsWith("\r")) {
+				ipAddress = addr.substring(0, addr.length()-1);
+			} else {
+				ipAddress = addr;
+			}
+		}
 	}
 
 	@Override
