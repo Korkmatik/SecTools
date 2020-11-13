@@ -1,4 +1,4 @@
-package models.v2;
+package models.v2.helperObjects;
 
 import org.json.JSONObject;
 
