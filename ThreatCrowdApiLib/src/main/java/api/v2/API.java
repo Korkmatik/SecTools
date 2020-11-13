@@ -1,4 +1,4 @@
-package api;
+package api.v2;
 
 import java.io.IOException;
 import java.net.http.HttpClient;
