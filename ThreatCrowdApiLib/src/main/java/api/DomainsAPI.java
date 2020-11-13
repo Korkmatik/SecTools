@@ -18,16 +18,7 @@ public class DomainsAPI extends API {
 	}
 	
 	public DomainResponse getDomain(String domain) throws IOException, InterruptedException {
-		HttpClient client = HttpClient.newHttpClient();
-				
-		String url = getURL(domain);
-		System.out.println("URL: " + url);
-		HttpRequest request = HttpRequest.newBuilder().uri(java.net.URI.create(url)).build();
-		
-		HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
-		
-		String responseBody = response.body();
-		
+		String responseBody = getRequest(domain);
 		return new DomainResponse(responseBody);
 	}
 	
