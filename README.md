@@ -1,5 +1,5 @@
 # SecTools
-This repository contains all projects that have anything to do with IT Security.
+This repository contains all of my projects that have anything to do with IT Security.
 
 # Projects
 
